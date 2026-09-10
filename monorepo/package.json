@@ -1,0 +1,32 @@
+{
+  "name": "monorepo",
+  "version": "0.0.0",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "devDependencies": {
+    "eslint-config-custom": "*",
+    "prettier": "latest",
+    "turbo": "2.10.13-canary.4"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "yarn@4.5.1",
+  "volta": {
+    "node": "20.15.0",
+    "yarn": "4.5.1"
+  },
+  "resolutions": {
+    "subscriptions-transport-ws/ws": "^7.5.13",
+    "ws": "^8.21.0"
+  }
+}
